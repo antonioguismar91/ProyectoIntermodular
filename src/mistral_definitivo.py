@@ -2,8 +2,9 @@
 # PIPELINE FINAL– DSS HÍBRIDO ROBUSTO
 # ================================================================
 
-from google.colab import userdata
-MISTRAL_API_KEY = userdata.get('MISTRAL_API_KEY')
+import streamlit as st
+
+MISTRAL_API_KEY = st.secrets.get('MISTRAL_API_KEY', None)
 
 import requests, json, logging, time, re, zipfile, os, joblib
 import pandas as pd
@@ -775,7 +776,7 @@ Devuelve SOLO JSON con tu decisión:
     }
 
 import sys
-!{sys.executable} -m pip install catboost
+# !{sys.executable} -m pip install catboost
 
 # ================================================================
 # CARGA DE MODELOS Y DATASET (DESDE ZIP)
@@ -829,6 +830,10 @@ else:
 # ================================================================
 # DEMOSTRACIÓN DE CRITICIDAD POR POSICIÓN, ZONA Y GRADO
 # ================================================================
+
+scaler = None
+stack = None
+
 if scaler is not None and stack is not None:
     print("\n" + "="*80)
     print("DEMOSTRACIÓN DE CRITICIDAD POR POSICIÓN, ZONA Y GRADO")
