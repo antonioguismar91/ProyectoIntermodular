@@ -11,10 +11,19 @@ Original file is located at
 # PIPELINE FINAL– DSS HÍBRIDO ROBUSTO
 # ================================================================
 
-from google.colab import userdata
-MISTRAL_API_KEY = userdata.get('MISTRAL_API_KEY')
+import logging
+import os
 
-import requests, json, logging, time, re, zipfile, os, joblib
+try:
+    from google.colab import userdata
+    MISTRAL_API_KEY = userdata.get('MISTRAL_API_KEY')
+except Exception:
+    MISTRAL_API_KEY = os.environ.get('MISTRAL_API_KEY')
+    if MISTRAL_API_KEY is None:
+        logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+        logging.warning("MISTRAL_API_KEY no definida en el entorno. Las llamadas al LLM pueden fallar.")
+
+import requests, json, time, re, zipfile, joblib
 import pandas as pd
 import numpy as np
 from typing import Optional, Dict, Any
@@ -323,8 +332,8 @@ Devuelve SOLO JSON con tu decisión:
         }
     }
 
-import sys
-!{sys.executable} -m pip install catboost
+# import sys
+# !{sys.executable} -m pip install catboost  # Colab-only; comentado para ejecución local
 
 # ================================================================
 # CARGA DE MODELOS Y DATASET (DESDE ZIP)

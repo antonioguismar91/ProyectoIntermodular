@@ -23,7 +23,6 @@ from sklearn.metrics import (roc_auc_score, roc_curve, f1_score,
                              recall_score, precision_score)
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
-!pip install catboost --quiet
 from catboost import CatBoostClassifier
 import shap
 from scipy.stats import norm, gamma, truncnorm, bernoulli
@@ -406,7 +405,6 @@ print("   - shap_summary.png")
 print("   - shap_importance.png")
 print("   - *.pkl (modelos entrenados)")
 
-!zip -r resultados_tfg.zip /content/*
-from google.colab import files
-files.download('resultados_tfg.zip')
-
+# !zip -r resultados_tfg.zip /content/*
+# from google.colab import files
+# #files.download('resultados_tfg.zip')
