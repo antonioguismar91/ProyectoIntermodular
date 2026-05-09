@@ -1,0 +1,6 @@
+fecha,jugador,posicion,decision,risk_score,acwr,distancia_m,fatiga_subj,horas_sueno,fc_max,sprints,tiempo_recuperacion,fuente
+2026-05-09 11:46,Sin nombre,Defensa,VERDE,0.4,1.1,8000,5,7.5,88,18,2-3 semanas,LLM
+2026-05-09 11:48,Francisco Hernandez,Portero,VERDE,0.41,1.1,8000,5,7.5,88,18,3-5 días,LLM
+2026-05-09 11:49,Sin nombre,Defensa,ROJO,0.9,1.1,8000,5,7.5,88,18,Consultar al médico,REGLA_SEVERIDAD_EXTREMA
+2026-05-09 12:05,Manuel Fuentes,Portero,ROJO,0.9,1.1,8000,5,7.5,88,18,3-5 días,REGLA_SEVERIDAD_EXTREMA
+2026-05-09 12:05,Mario Martin,Centrocampista,ROJO,0.9,1.1,8000,5,7.5,88,18,3-5 días,REGLA_SEVERIDAD_EXTREMA
