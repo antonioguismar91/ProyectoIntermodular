@@ -302,47 +302,13 @@ h1, h2, h3, h4, p, span, label, div { color: #FFFFFF; }
     filter: drop-shadow(0 0 18px rgba(0,242,255,0.25));
 }
 
-/* ── Modo claro: overrides para que todo sea legible ── */
-@media (prefers-color-scheme: light) {
-    .stApp { background-color: #060b14 !important; }
-    html, body { background-color: #060b14 !important; }
-}
+/* ── Scrollbar personalizada ── */
+::-webkit-scrollbar             { width: 6px; height: 6px; }
+::-webkit-scrollbar-track       { background: #060b14; }
+::-webkit-scrollbar-thumb       { background: #1e2e45; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00f2ff; }
 
-/* Forzar fondo oscuro independientemente del tema del sistema */
-[data-testid="stAppViewContainer"] { background-color: #060b14 !important; }
-[data-testid="stHeader"] { background-color: #060b14 !important; }
-[data-testid="stMain"] { background-color: #060b14 !important; }
-section[data-testid="stSidebar"] { background: linear-gradient(180deg, #0d1526 0%, #060b14 100%) !important; }
-
-/* Inputs en modo claro */
-input, textarea, select {
-    background-color: #0d1526 !important;
-    color: #ffffff !important;
-}
-
-/* Dataframe en modo claro */
-[data-testid="stDataFrame"] { background-color: #0d1526 !important; color: #c8d6e5 !important; }
-iframe { background-color: transparent !important; }
-
-/* Tabs */
-.stTabs [data-baseweb="tab-list"] { background-color: #0d1526 !important; }
-.stTabs [data-baseweb="tab"] { color: #8899aa !important; }
-.stTabs [aria-selected="true"] { color: #00f2ff !important; border-bottom-color: #00f2ff !important; }
-.stTabs [data-baseweb="tab-panel"] { background-color: transparent !important; }
-
-/* File uploader */
-[data-testid="stFileUploader"] {
-    background-color: #0d1526 !important;
-    border: 1px solid rgba(0,242,255,0.2) !important;
-    border-radius: 8px !important;
-}
-[data-testid="stFileUploader"] * { color: #c8d6e5 !important; }
-
-/* Expander */
-[data-testid="stExpander"] { background-color: #0d1526 !important; border: 1px solid rgba(0,242,255,0.15) !important; }
-[data-testid="stExpander"] summary { color: #c8d6e5 !important; }
-
-/* Download button */
+/* ── Download button ── */
 .stDownloadButton > button {
     background: linear-gradient(135deg, #00f2ff 0%, #0080ff 100%) !important;
     color: #060b14 !important;
@@ -351,15 +317,11 @@ iframe { background-color: transparent !important; }
     border: none !important;
     border-radius: 10px !important;
     letter-spacing: 2px !important;
-    transition: box-shadow 0.3s, transform 0.2s !important;
 }
 .stDownloadButton > button:hover {
     box-shadow: 0 0 30px rgba(0,242,255,0.6) !important;
     transform: translateY(-2px) !important;
 }
-
-/* Warning / info / error boxes */
-[data-testid="stAlert"] { background-color: #0d1526 !important; border-radius: 10px !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -436,10 +398,10 @@ if opcion == "🏠  Bienvenida":
     st.markdown("<div style='font-family:Orbitron,sans-serif; font-size:0.75rem; color:#8899aa; letter-spacing:3px; margin-bottom:16px;'>INDICADORES CLAVE</div>", unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
     metrics = [
-        ("🛡️", "24%", "REDUCCIÓN LESIONES", "↑ vs temporada anterior"),
-        ("🎯", "92.4%", "PRECISIÓN MODELO", "Stacking Ensemble"),
-        ("⚡", "<1s", "TIEMPO ANÁLISIS", "Respuesta en tiempo real"),
-        ("✅", "98%", "CONFIANZA TÉCNICA", "Encuesta cuerpo técnico"),
+        ("📈", "AUC 0.82", "CAPACIDAD PREDICTIVA", "Stacking Ensemble"),
+        ("🎯", "71.5%", "RECALL DEL MODELO", "Lesiones detectadas"),
+        ("🗄️", "30.000", "REGISTROS ENTRENAMIENTO", "Dataset sintético calibrado"),
+        ("🧱", "5 capas", "ARQUITECTURA DSS", "ML + NLP + Reglas clínicas"),
     ]
     for col, (icon, val, label, delta) in zip([c1, c2, c3, c4], metrics):
         with col:
@@ -470,9 +432,9 @@ if opcion == "🏠  Bienvenida":
         """, unsafe_allow_html=True)
 
         naves = [
-            ("🛰️", "Nave 1 · Análisis Cognitivo", "Procesamiento de reportes médicos mediante Mistral AI para detectar fatiga subjetiva, señales de alarma clínica y patrones de riesgo en lenguaje natural."),
-            ("🧠", "Nave 2 · Motor Predictivo", "Algoritmo Stacking Ensemble que integra ACWR, distancias GPS, sprints de alta intensidad y métricas biométricas en una probabilidad de riesgo calibrada."),
-            ("💻", "Nave 3 · Centro de Mando", "Interfaz de decisión inmediata diseñada para el cuerpo técnico, con semáforo de riesgo, explicabilidad SHAP y trazabilidad de cada análisis."),
+            ("🛰️", "Análisis Cognitivo", "Procesamiento de reportes médicos mediante Mistral AI para detectar fatiga subjetiva, señales de alarma clínica y patrones de riesgo en lenguaje natural."),
+            ("🧠", "Motor Predictivo", "Algoritmo Stacking Ensemble que integra ACWR, distancias GPS, sprints de alta intensidad y métricas biométricas en una probabilidad de riesgo calibrada."),
+            ("💻", "Centro de Mando", "Interfaz de decisión inmediata diseñada para el cuerpo técnico, con semáforo de riesgo, explicabilidad SHAP y trazabilidad de cada análisis."),
         ]
         for icon, titulo, texto in naves:
             st.markdown(f"""
