@@ -1,6 +1,6 @@
 # 📁 docs — Documentación de GreenLight AI
 
-Esta carpeta contiene la documentación completa del proyecto **GreenLight AI**, un Sistema de Soporte a la Decisión (DSS) híbrido para la prevención de lesiones en el fútbol profesional, desarrollado como Proyecto Intermodular del Grado Superior en DAM.
+Esta carpeta contiene la documentación completa del proyecto **GreenLight AI**, un Sistema de Soporte a la Decisión (DSS) híbrido para la prevención de lesiones en el fútbol profesional, desarrollado como Proyecto Intermodular del Master de Inteligencia Artificial y Big Data.
 
 ---
 
