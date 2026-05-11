@@ -4,7 +4,7 @@
 
 **Proyecto Fin de Máster — Máster en Inteligencia Artificial y Big Data**  
 Centro FP Superior · Campus Cámara Comercio Sevilla · Mayo 2026  
-**Autor:** Adrián Pavón Alcón y Antonio Guisado Martín
+**Autores:** Adrián Pavón Alcón y Antonio Guisado Martín
 
 ---
 
