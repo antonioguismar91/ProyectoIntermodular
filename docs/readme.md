@@ -120,6 +120,6 @@ Guía para el cuerpo técnico (preparadores físicos, fisioterapeutas, médicos)
 ## ✍️ Autores
 
 **Adrián Pavón Alcón**  
-**Antonio Guisado Martín**  
+**Antonio Guisado Marín**  
 Master en Inteligencia Artificial y Big Data
 Centro FP Superior · Campus Cámara Comercio Sevilla · Mayo 2026
