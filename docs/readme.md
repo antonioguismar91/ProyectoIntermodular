@@ -7,7 +7,7 @@ Esta carpeta contiene la documentación completa del proyecto **GreenLight AI**,
 ## 📄 Documentos incluidos
 
 ### 01 · Memoria GreenLight AI
-**`01_Memoria_GreenLight_AI.docx`**
+**`01_Memoria_GreenLight_AI.pdf`**
 
 Documento principal del Proyecto Intermodular, redactado siguiendo la estructura oficial del centro. Recoge el ciclo completo del proyecto: desde el problema de partida hasta las conclusiones finales.
 
@@ -26,7 +26,7 @@ Documento principal del Proyecto Intermodular, redactado siguiendo la estructura
 ---
 
 ### 02 · Evaluación Técnica
-**`02_Evaluacion_Tecnica.docx`**
+**`02_Evaluacion_Tecnica.pdf`**
 
 Documento complementario centrado en el análisis de rendimiento del sistema. Orientado a un lector con conocimientos técnicos que quiera verificar los resultados de forma detallada.
 
@@ -49,7 +49,7 @@ Umbral:   0.4809
 ---
 
 ### 03 · Manual Técnico
-**`03_Manual_Tecnico.docx`**
+**`03_Manual_Tecnico.pdf`**
 
 Guía completa para desarrolladores. Cubre instalación, configuración, arquitectura interna y despliegue del sistema.
 
@@ -80,7 +80,7 @@ run_app.bat
 ---
 
 ### 04 · Manual de Usuario
-**`04_Manual_Usuario.docx`**
+**`04_Manual_Usuario.pdf`**
 
 Guía para el cuerpo técnico (preparadores físicos, fisioterapeutas, médicos). No requiere conocimientos de programación.
 
